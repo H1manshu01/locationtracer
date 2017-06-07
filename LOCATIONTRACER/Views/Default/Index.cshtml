@@ -1,0 +1,70 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="container-fluid">
+    <!--Jumbotron-->
+    <div class="jumbotron world divBg hoverable">
+        <div class="col-md-4 pull-left">
+            <img src="~/Content/Image/logo.png" />
+            <strong><h1 class="text-primary"> GeoTagger </h1></strong>
+        </div>
+        <!--/.Jumbotron-->
+        <div class="col-md-4">
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.2/d3.min.js'></script>
+            <script src='http://d3js.org/topojson.v1.min.js'></script>
+
+            <script src="~/Scripts/index.js"></script>
+        </div>
+        @using (Html.BeginForm("FileUpload", "Default", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+        <div class="col-md-4 pull-right form-pos hoverable blur" id="img-upload">
+            <div class="row ">
+                <div class="card mx-auto ">
+                    <div class="card-block">
+
+                        <!--Header-->
+                        <div class="form-header blue-gradient">
+                            <h3><i class="fa fa-user"></i> Upload Image:</h3>
+                        </div>
+                        <input type="file" class="btn btn-indigo select" name="file" value="file">
+                        <div class="text-center">
+                            <button class="btn btn-indigo">Upload</button>
+                            <hr>
+                            <fieldset class="form-group">
+                                <label>Upload your image to get the location on map</label>
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><br>
+        }
+
+    </div>
+</div>
+
+    @*<div>
+            <img src="~/Content/Image/background3.jpg" style="height:400px;width:1140px;"/>
+        </div><br />
+        <center>
+            @using (Html.BeginForm("FileUpload", "Default", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+
+                    <div class="form-group">
+                        <input type="file" name="img[]" class="file">
+                       <i class="glyphicon glyphicon-picture"></i>
+                        <input type="text" class="form-control" disabled placeholder="Upload Image">
+                        <span class="input-group-btn">
+                            <button class="btn btn-primary input-lg browse" type="button"><i class="glyphicon glyphicon-search"></i>Browse</button>
+                        </span>
+                    </div>
+
+
+                <label for="file">
+                    Upload Image:
+                </label><input type="file" name="file" id="file" /><br />
+                <input type="submit" value="Upload" class="btn-success btn" />
+            }
+        </center>*@

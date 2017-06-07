@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>GeoTagger</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="~/Content/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="~/Content/style.css" rel="stylesheet">
+    <link href="~/Content/rotate.css" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <!--Navbar-->
+        <nav class="navbar navbar-toggleable-md navbar-inverse unique-color bg-success">
+            <div class="container">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav1" aria-controls="navbarNav1" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                @Html.ActionLink("GeoTagger", "Index", "default", new { area = "" }, new { @class = "navbar-brand" })
+                <div class="collapse navbar-collapse" id="navbarNav1">
+                    <ul class="navbar-nav mr-auto text-left"></ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a href="@Url.Action("Index","default")" class="nav-link"><i class="fa fa-home"></i> Home <span class="sr-only">(current)</span></a>
+                            @*<i class="fa fa-home">@Html.ActionLink(" Home", "Index", "default", new { area = "" }, new { @class = "nav-link" })<span class="sr-only">(current)</span></i>*@
+                        </li>
+                        <li class="nav-item">
+                            <a href="@Url.Action("Features","default")" class="nav-link"><i class="fa fa-location-arrow"></i> Features</a>
+                            @*<i class="fa fa-location-arrow">@Html.ActionLink(" Features", "Index", "default", new { area = "" }, new { @class = "nav-link" })</i>*@
+                        </li>
+                        <li class="nav-item">
+                            <a href="@Url.Action("About","default")" class="nav-link"><i class="fa fa-info-circle"></i> About</a>
+                            @*<i class="fa fa-info-circle">@Html.ActionLink(" About", "About", "default", new { area = "" }, new { @class = "nav-link" })</i>*@
+                        </li>
+                        <li class="nav-item">
+                            <a href="@Url.Action("Contact","default")" class="nav-link"><i class="fa fa-mobile"></i> Contact us</a>
+                            @*<i class="fa fa-mobile">@Html.ActionLink(" Contact us", "Contact", "default", new { area = "" }, new { @class = "nav-link" })</i>*@
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        @RenderBody()
+    </main>
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - GEOTAGGER</p>
+        </footer>
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="~/Scripts/jquery-3.1.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="~/Scripts/tether.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="~/Scripts/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="~/Scripts/mdb.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/Script.js"></script>
+    <script type="text/javascript" src="~/Scripts/rotate.js"></script>
+</body>
+</html>
